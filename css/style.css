@@ -809,7 +809,10 @@ footer {
 .footer-menu {
 	padding: 0px;
 	width: 100%;
-	float: left;
+	/* float: left; */
+	/* display: flex; */
+	align-items: center;
+	justify-content: center;
 	list-style: none;
 }
 
@@ -862,7 +865,7 @@ footer {
 	background-color: gold;
 	margin-top: 10px;
 }
-
+											/* mobile view */
 @media (min-width: 300px) and (max-width: 600px) {
 	/* header */
 	.notification{
@@ -881,6 +884,7 @@ footer {
 	.event-content h3{
 		font-size: 12px;
 	 }
+	
 	/* cambus */
 	.campus{
 		flex-direction: column;
@@ -900,6 +904,10 @@ footer {
 	.about-campus{
 		width:100%;
 	}	
+	/* achivement */
+	.achievement h2{
+	text-align: center;
+	}
 	/* courses */
 	.Pop{
 		flex-direction: column;
@@ -909,11 +917,15 @@ footer {
 	.popular-course{
 		width:100%;
 		padding: 20px;
-	}
-	.popular-course h2{
+		margin-left: 0px;
+		height: auto;
 		text-align: center;
 	}
+	.popular-course p{
+		text-align: left;
+	}
 	.popular-course span{
+		text-align: center;
 		display: none;
 	}
 	.Courses{
@@ -998,6 +1010,19 @@ footer {
 		margin-bottom: 30px;
 		text-align: center;
 	}
+	.footer-menu{
+		/* text-align: center; */
+		/* display: flex;
+		align-items: center;
+		justify-content: center; */
+	}
+	/* .lists{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	} */
+	
 	.footer-link h2{
 		text-align: center;
 	}
