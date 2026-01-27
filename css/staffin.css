@@ -13,6 +13,7 @@ section{
     background-size: cover;
 }
 form{
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,6 +29,15 @@ input{
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+}
+select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: white;
+    color: black;
 }
 button{
     padding: 10px;
