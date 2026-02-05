@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Details</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f6f9;
+      margin: 0;
+    }
+
+    header {
+      background: #1f3c88;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .container {
+      background: white;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 8px;
+    }
+
+    .row {
+      margin: 10px 0;
+    }
+
+    .row b {
+      width: 150px;
+      display: inline-block;
+    }
+
+    button {
+      background: red;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h3>Student Details</h3>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<div class="container" id="details"></div>
+
+<script>
+  // Get logged in student
+  let student = JSON.parse(localStorage.getItem("loggedInStudent"));
+
+  // If not logged in, go back to login
+  if (!student) {
+    window.location.href = "login.html";
+  }
+
+  // Show student details
+  document.getElementById("details").innerHTML = `
+    <div class="row"><b>Name:</b> ${student.name}</div>
+    <div class="row"><b>Roll No:</b> ${student.rollNo}</div>
+    <div class="row"><b>Date of Birth:</b> ${student.dob}</div>
+    <div class="row"><b>Gender:</b> ${student.gender}</div>
+    <div class="row"><b>Email:</b> ${student.email}</div>
+    <div class="row"><b>Phone:</b> ${student.phone}</div>
+    <div class="row"><b>Department:</b> ${student.department}</div>
+    <div class="row"><b>Year:</b> ${student.year}</div>
+    <div class="row"><b>Address:</b> ${student.address}</div>
+  `;
+
+  // Logout function
+  function logout() {
+    localStorage.removeItem("loggedInStudent");
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+</html>
