@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Details | College Portal</title>
+  <link rel="stylesheet" href="./student.css">
+</head>
+<body>
+
+  <header>
+    <h1>College Portal</h1>
+    <p>Student Details Form</p>
+  </header>
+
+  <div class="container">
+    <h2>Student Information</h2>
+    <form>
+      <div class="form-group">
+        <label for="studentName">Student Name</label>
+        <input type="text" id="studentName" placeholder="Enter full name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="rollNo">Roll Number</label>
+        <input type="text" id="rollNo" placeholder="Enter roll number" required />
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required />
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender" required>
+          <option value="">Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter email" />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter phone number" />
+      </div>
+
+      <div class="form-group">
+        <label for="department">Department</label>
+        <select id="department">
+          <option value="">Select Department</option>
+          <option>Computer Science</option>
+          <option>Information Technology</option>
+          <option>Electronics</option>
+          <option>Mechanical</option>
+          <option>Civil</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="year">Year</label>
+        <select id="year">
+          <option value="">Select Year</option>
+          <option>1st Year</option>
+          <option>2nd Year</option>
+          <option>3rd Year</option>
+          <option>4th Year</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="photo">Student Photo</label>
+        <input type="file" id="photo" accept="image/*" />
+      </div>
+
+      <div class="form-group full">
+        <label for="address">Address</label>
+        <textarea id="address" rows="3" placeholder="Enter address"></textarea>
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="submit-btn">Submit</button>
+        <button type="reset" class="reset-btn">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    © 2026 College Portal. All rights reserved.
+  </footer>
+<script src="./student.js"></script>
+</body>
+</html>
